@@ -1,0 +1,27 @@
+<form [formGroup]="UserRegister" >
+    <div class="container">
+    <div class="alert alert-danger" *ngIf="validation_error">{{validation_error}}</div>
+  <div class="form-group">
+  <label >FirstName</label>
+  <input type="text" class="form-control" formControlName="firstName" required>
+  <div class="alert alert-danger" *ngIf="UserRegister.submitted && firstName.error.required">FirstName is required.</div>
+  </div>
+  <div class="form-group">
+      <label >LastName</label>
+      <input type="text"  class="form-control" formControlName="lastName" required>
+      </div>
+      <div class="form-group">
+          <label >Email</label>
+          <input type="text"  class="form-control" formControlName="email" required>
+          </div>
+          <div class="form-group">
+              <label >Password</label>
+              <input type="text"  class="form-control" formControlName="password" required>
+              </div>
+              <div class="form-group">
+                  <label >Confirm Password</label>
+                  <input type="text"  class="form-control" formControlName="cpassword" required>
+                  </div><br>
+                  <button class="btn btn-primary" (click)="Create_user()">Submit</button>
+                  </div>
+                </form>

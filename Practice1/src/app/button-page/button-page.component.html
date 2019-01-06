@@ -1,0 +1,27 @@
+
+<body>
+<div style="text-align:center">
+<button class="btn btn-primary btn-position" (click)="get_all_users()">Get all Users</button>
+<!-- <div id='calendar'></div> -->
+
+<div *ngIf="users">
+    <table>
+        <thead>
+            <tr><td>Firstname</td>
+                <td>lastname</td>
+                <td>email</td>
+                <td>Roles</td>
+                </tr>
+        </thead>
+        <tbody *ngFor="let user of users">
+            <tr>
+                <td>{{user.firstName}}</td>
+                <td>{{user.lastName}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.roles}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</div>
+</body>
